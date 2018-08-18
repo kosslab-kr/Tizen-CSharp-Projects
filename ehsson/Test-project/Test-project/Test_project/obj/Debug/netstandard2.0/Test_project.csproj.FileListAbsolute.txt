@@ -1,0 +1,10 @@
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project\bin\Debug\netstandard2.0\Test_project.deps.json
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project\bin\Debug\netstandard2.0\Test_project.dll
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project\bin\Debug\netstandard2.0\Test_project.pdb
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project\obj\Debug\netstandard2.0\Test_project.csprojAssemblyReference.cache
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project\obj\Debug\netstandard2.0\Test_project.csproj.CoreCompileInputs.cache
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project\obj\Debug\netstandard2.0\Test_project.AssemblyInfoInputs.cache
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project\obj\Debug\netstandard2.0\Test_project.AssemblyInfo.cs
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project\obj\Debug\netstandard2.0\Test_project.dll
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project\obj\Debug\netstandard2.0\Test_project.pdb

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_project", "Test-project\Test_project\Test_project.csproj", "{2211BB65-C60A-47E9-AF21-C786503CC0B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_project.Tizen.Mobile", "Test-project\Test_project.Tizen.Mobile\Test_project.Tizen.Mobile.csproj", "{95402089-CBD2-4607-A5C3-BB8CA754CFEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2211BB65-C60A-47E9-AF21-C786503CC0B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2211BB65-C60A-47E9-AF21-C786503CC0B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2211BB65-C60A-47E9-AF21-C786503CC0B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2211BB65-C60A-47E9-AF21-C786503CC0B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95402089-CBD2-4607-A5C3-BB8CA754CFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95402089-CBD2-4607-A5C3-BB8CA754CFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95402089-CBD2-4607-A5C3-BB8CA754CFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95402089-CBD2-4607-A5C3-BB8CA754CFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C641D90-227E-4888-8F9A-5E69B961CE23}
+	EndGlobalSection
+EndGlobal

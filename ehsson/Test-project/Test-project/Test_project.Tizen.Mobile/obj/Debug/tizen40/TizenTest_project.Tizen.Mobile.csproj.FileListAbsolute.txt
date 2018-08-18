@@ -1,0 +1,11 @@
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Core.dll
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Platform.Tizen.dll
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Platform.dll
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Xaml.dll
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Test_project.dll
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Test_project.pdb
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Test_project.Tizen.Mobile.dll
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Test_project.Tizen.Mobile.pdb
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\tpkroot\shared\res\Test_project.Tizen.Mobile.png
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\tpkroot\tizen-manifest.xml
+C:\Users\Samsung\source\repos\Test-project\Test-project\Test_project.Tizen.Mobile\bin\Debug\tizen40\org.tizen.example.Test_project.Tizen.Mobile-1.0.0.tpk
