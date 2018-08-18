@@ -10,6 +10,7 @@ Tizen-C# App for Mobile, Wearable, and TV profiles.
 * [Download Plugin](https://developer.tizen.org/development/visual-studio-tools-tizen/installing-visual-studio-tools-tizen)
 
 ### Reference
+* [Sample project/code](https://github.com/Samsung/Tizen-CSharp-Samples)
 * [Tizen .NET](https://developer.tizen.org/development/api-reference/.net-application)
 * [TizenFX API Reference](https://developer.tizen.org/dev-guide/csapi/index.html)
 
