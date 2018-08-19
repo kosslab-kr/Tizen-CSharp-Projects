@@ -11,6 +11,7 @@ Tizen-C# App for Mobile, Wearable, and TV profiles.
 
 ### Reference
 * [Sample project/code](https://github.com/Samsung/Tizen-CSharp-Samples)
+* [Education](http://www.tizenschool.org)
 * [Tizen .NET](https://developer.tizen.org/development/api-reference/.net-application)
 * [TizenFX API Reference](https://developer.tizen.org/dev-guide/csapi/index.html)
 
