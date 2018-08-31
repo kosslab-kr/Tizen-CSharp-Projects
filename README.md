@@ -13,7 +13,10 @@ Tizen-C# App for Mobile, Wearable, and TV profiles.
 * [Sample project/code](https://github.com/Samsung/Tizen-CSharp-Samples)
 * [Education](http://www.tizenschool.org)
 * [Tizen .NET](https://developer.tizen.org/development/api-reference/.net-application)
-* [TizenFX API Reference](https://developer.tizen.org/dev-guide/csapi/index.html)
+* [TizenFX API Reference](https://developer.tizen.org/dev-guide/csapi/index.html) : Dev Guide of C# Device APIs for Tizen
+* [Tizen.CircularUI API Reference](https://samsung.github.io/Tizen.CircularUI/) : Circular UI Framework for Tizen Wearable Device (Galaxy Watch)
+
+
 
 ## Create and manage the project
 
