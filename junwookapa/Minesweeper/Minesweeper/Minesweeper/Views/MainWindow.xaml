@@ -1,0 +1,162 @@
+﻿<Window x:Class="Minesweeper.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Minesweeper" Height="406" Width="410">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="290*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.ColumnSpan="2" Click="MenuItem_Click_New" Content="New Game" HorizontalAlignment="Left" Height="22" Margin="10,0,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Grid.ColumnSpan="2" Click="MenuItem_Click_Exit" Content="Exit" HorizontalAlignment="Left" Height="22" Margin="115,0,0,0" VerticalAlignment="Top" Width="50"/>
+
+        <Label Grid.ColumnSpan="2" FontSize="12.0" FontWeight="ExtraBold" Content="Mines:" HorizontalAlignment="Left" Margin="330,18,0,294" VerticalAlignment="Center" Width="50" Grid.Row="1"/>
+        <TextBox x:Name="MinesIndicator" Grid.ColumnSpan="2" FontSize="12.0" HorizontalAlignment="Left" Padding="0,0,0,0" Margin="330,55,0,267" TextWrapping="NoWrap" Background="Lavender" BorderBrush="Black" TextAlignment="Center" Text="10" VerticalAlignment="Center" Width="50" Grid.Row="1"/>
+        <Label Grid.ColumnSpan="2" FontSize="12.0" FontWeight="ExtraBold" Content="Time:" HorizontalAlignment="Left" Margin="330,113,0,205" VerticalAlignment="Center" Width="50" Grid.Row="1"/>
+        <TextBox x:Name="TimeIndicator" Grid.ColumnSpan="2" FontSize="12.0" HorizontalAlignment="Left" Padding="0,0,0,0" Margin="330,148,0,174" TextWrapping="NoWrap" Background="Lavender"  BorderBrush="Black" TextAlignment="Center" Text="0" VerticalAlignment="Center" Width="50" Grid.Row="1"/>
+        <Image Margin="320,0,0,27" Grid.Row="1" Source="Shaggy.png" Stretch="Fill" Grid.ColumnSpan="2" Height="154" VerticalAlignment="Bottom"/>
+        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="right" Height="23" Margin="10,325,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="Team&quot;SHAGGIE&quot; @ Telerik Academy" VerticalAlignment="Center" Width="210"/>
+        <Grid x:Name="ButtonsGrid" Grid.ColumnSpan="2" Margin="10,20,10,10" Grid.Row="1" Height="320" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Button00" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="0" Grid.Column="0"/>
+            <Button x:Name="Button01" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="0" Grid.Column="1"/>
+            <Button x:Name="Button02" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="0" Grid.Column="2"/>
+            <Button x:Name="Button03" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="0" Grid.Column="3"/>
+            <Button x:Name="Button04" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="0" Grid.Column="4"/>
+            <Button x:Name="Button05" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="0" Grid.Column="5"/>
+            <Button x:Name="Button06" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="0" Grid.Column="6"/>
+            <Button x:Name="Button07" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="0" Grid.Column="7"/>
+            <Button x:Name="Button08" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="0" Grid.Column="8"/>
+            <Button x:Name="Button09" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="0" Grid.Column="9"/>
+
+            <Button x:Name="Button10" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="1" Grid.Column="0"/>
+            <Button x:Name="Button11" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="1" Grid.Column="1"/>
+            <Button x:Name="Button12" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="1" Grid.Column="2"/>
+            <Button x:Name="Button13" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="1" Grid.Column="3"/>
+            <Button x:Name="Button14" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="1" Grid.Column="4"/>
+            <Button x:Name="Button15" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="1" Grid.Column="5"/>
+            <Button x:Name="Button16" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="1" Grid.Column="6"/>
+            <Button x:Name="Button17" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="1" Grid.Column="7"/>
+            <Button x:Name="Button18" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="1" Grid.Column="8"/>
+            <Button x:Name="Button19" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="1" Grid.Column="9"/>
+
+            <Button x:Name="Button20" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="2" Grid.Column="0"/>
+            <Button x:Name="Button21" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="2" Grid.Column="1"/>
+            <Button x:Name="Button22" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="2" Grid.Column="2"/>
+            <Button x:Name="Button23" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="2" Grid.Column="3"/>
+            <Button x:Name="Button24" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="2" Grid.Column="4"/>
+            <Button x:Name="Button25" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="2" Grid.Column="5"/>
+            <Button x:Name="Button26" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="2" Grid.Column="6"/>
+            <Button x:Name="Button27" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="2" Grid.Column="7"/>
+            <Button x:Name="Button28" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="2" Grid.Column="8"/>
+            <Button x:Name="Button29" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="2" Grid.Column="9"/>
+
+            <Button x:Name="Button30" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="3" Grid.Column="0"/>
+            <Button x:Name="Button31" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="3" Grid.Column="1"/>
+            <Button x:Name="Button32" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="3" Grid.Column="2"/>
+            <Button x:Name="Button33" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="3" Grid.Column="3"/>
+            <Button x:Name="Button34" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="3" Grid.Column="4"/>
+            <Button x:Name="Button35" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="3" Grid.Column="5"/>
+            <Button x:Name="Button36" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="3" Grid.Column="6"/>
+            <Button x:Name="Button37" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="3" Grid.Column="7"/>
+            <Button x:Name="Button38" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="3" Grid.Column="8"/>
+            <Button x:Name="Button39" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="3" Grid.Column="9"/>
+
+            <Button x:Name="Button40" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="4" Grid.Column="0"/>
+            <Button x:Name="Button41" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="4" Grid.Column="1"/>
+            <Button x:Name="Button42" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="4" Grid.Column="2"/>
+            <Button x:Name="Button43" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="4" Grid.Column="3"/>
+            <Button x:Name="Button44" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="4" Grid.Column="4"/>
+            <Button x:Name="Button45" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="4" Grid.Column="5"/>
+            <Button x:Name="Button46" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="4" Grid.Column="6"/>
+            <Button x:Name="Button47" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="4" Grid.Column="7"/>
+            <Button x:Name="Button48" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="4" Grid.Column="8"/>
+            <Button x:Name="Button49" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="4" Grid.Column="9"/>
+
+            <Button x:Name="Button50" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="5" Grid.Column="0"/>
+            <Button x:Name="Button51" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="5" Grid.Column="1"/>
+            <Button x:Name="Button52" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="5" Grid.Column="2"/>
+            <Button x:Name="Button53" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="5" Grid.Column="3"/>
+            <Button x:Name="Button54" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="5" Grid.Column="4"/>
+            <Button x:Name="Button55" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="5" Grid.Column="5"/>
+            <Button x:Name="Button56" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="5" Grid.Column="6"/>
+            <Button x:Name="Button57" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="5" Grid.Column="7"/>
+            <Button x:Name="Button58" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="5" Grid.Column="8"/>
+            <Button x:Name="Button59" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="5" Grid.Column="9"/>
+
+            <Button x:Name="Button60" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="6" Grid.Column="0"/>
+            <Button x:Name="Button61" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="6" Grid.Column="1"/>
+            <Button x:Name="Button62" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="6" Grid.Column="2"/>
+            <Button x:Name="Button63" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="6" Grid.Column="3"/>
+            <Button x:Name="Button64" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="6" Grid.Column="4"/>
+            <Button x:Name="Button65" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="6" Grid.Column="5"/>
+            <Button x:Name="Button66" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="6" Grid.Column="6"/>
+            <Button x:Name="Button67" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="6" Grid.Column="7"/>
+            <Button x:Name="Button68" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="6" Grid.Column="8"/>
+            <Button x:Name="Button69" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="6" Grid.Column="9"/>
+
+            <Button x:Name="Button70" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="7" Grid.Column="0"/>
+            <Button x:Name="Button71" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="7" Grid.Column="1"/>
+            <Button x:Name="Button72" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="7" Grid.Column="2"/>
+            <Button x:Name="Button73" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="7" Grid.Column="3"/>
+            <Button x:Name="Button74" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="7" Grid.Column="4"/>
+            <Button x:Name="Button75" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="7" Grid.Column="5"/>
+            <Button x:Name="Button76" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="7" Grid.Column="6"/>
+            <Button x:Name="Button77" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="7" Grid.Column="7"/>
+            <Button x:Name="Button78" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="7" Grid.Column="8"/>
+            <Button x:Name="Button79" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="7" Grid.Column="9"/>
+
+            <Button x:Name="Button80" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="8" Grid.Column="0"/>
+            <Button x:Name="Button81" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="8" Grid.Column="1"/>
+            <Button x:Name="Button82" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="8" Grid.Column="2"/>
+            <Button x:Name="Button83" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="8" Grid.Column="3"/>
+            <Button x:Name="Button84" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="8" Grid.Column="4"/>
+            <Button x:Name="Button85" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="8" Grid.Column="5"/>
+            <Button x:Name="Button86" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="8" Grid.Column="6"/>
+            <Button x:Name="Button87" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="8" Grid.Column="7"/>
+            <Button x:Name="Button88" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="8" Grid.Column="8"/>
+            <Button x:Name="Button89" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="8" Grid.Column="9"/>
+
+            <Button x:Name="Button90" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="9" Grid.Column="0"/>
+            <Button x:Name="Button91" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="9" Grid.Column="1"/>
+            <Button x:Name="Button92" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="9" Grid.Column="2"/>
+            <Button x:Name="Button93" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="9" Grid.Column="3"/>
+            <Button x:Name="Button94" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="9" Grid.Column="4"/>
+            <Button x:Name="Button95" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="9" Grid.Column="5"/>
+            <Button x:Name="Button96" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="9" Grid.Column="6"/>
+            <Button x:Name="Button97" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="9" Grid.Column="7"/>
+            <Button x:Name="Button98" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="9" Grid.Column="8"/>
+            <Button x:Name="Button99" Content="" MouseRightButtonDown="Right_Button_Click" Click="Button_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Grid.Row="9" Grid.Column="9"/>
+
+        </Grid>
+    </Grid>
+</Window>

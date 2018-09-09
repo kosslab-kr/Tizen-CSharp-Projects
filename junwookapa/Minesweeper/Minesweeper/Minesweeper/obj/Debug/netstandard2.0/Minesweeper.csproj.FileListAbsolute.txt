@@ -1,0 +1,10 @@
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper\bin\Debug\netstandard2.0\Minesweeper.deps.json
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper\bin\Debug\netstandard2.0\Minesweeper.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper\bin\Debug\netstandard2.0\Minesweeper.pdb
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper\obj\Debug\netstandard2.0\Minesweeper.csprojAssemblyReference.cache
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper\obj\Debug\netstandard2.0\Minesweeper.csproj.CoreCompileInputs.cache
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper\obj\Debug\netstandard2.0\Minesweeper.AssemblyInfoInputs.cache
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper\obj\Debug\netstandard2.0\Minesweeper.AssemblyInfo.cs
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper\obj\Debug\netstandard2.0\Minesweeper.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper\obj\Debug\netstandard2.0\Minesweeper.pdb

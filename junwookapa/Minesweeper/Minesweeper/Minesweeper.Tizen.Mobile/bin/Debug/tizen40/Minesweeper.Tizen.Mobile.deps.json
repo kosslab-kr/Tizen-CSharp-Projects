@@ -1,0 +1,88 @@
+{
+  "runtimeTarget": {
+    "name": "Tizen,Version=v4.0/",
+    "signature": "70cb5561ae97349b8bc5bd7cb114642637142f58"
+  },
+  "compilationOptions": {},
+  "targets": {
+    "Tizen,Version=v4.0": {},
+    "Tizen,Version=v4.0/": {
+      "Minesweeper.Tizen.Mobile/1.0.0": {
+        "dependencies": {
+          "Minesweeper": "1.0.0",
+          "Tizen.NET": "4.0.0",
+          "Tizen.NET.Sdk": "1.0.1"
+        },
+        "runtime": {
+          "Minesweeper.Tizen.Mobile.dll": {}
+        }
+      },
+      "Tizen.NET/4.0.0": {},
+      "Tizen.NET.Sdk/1.0.1": {},
+      "Xamarin.Forms/3.1.0.637273": {
+        "dependencies": {
+          "Tizen.NET": "4.0.0"
+        },
+        "runtime": {
+          "lib/tizen40/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          },
+          "lib/tizen40/Xamarin.Forms.Platform.Tizen.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          },
+          "lib/tizen40/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/tizen40/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Minesweeper/1.0.0": {
+        "dependencies": {
+          "Xamarin.Forms": "3.1.0.637273"
+        },
+        "runtime": {
+          "Minesweeper.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Minesweeper.Tizen.Mobile/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tizen.NET/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e/q/gwwzrcR6LRsQiZbpKYN+GJsiA7/lh6p8ztANDoJLnIlKPmiNsBXxm6Tt8yHzwMywmAXBwyp4mpLCRG0J+A==",
+      "path": "tizen.net/4.0.0",
+      "hashPath": "tizen.net.4.0.0.nupkg.sha512"
+    },
+    "Tizen.NET.Sdk/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g3LzVzxalGn3F1H9yf2lXFT4CHlRlrzqEU8MmSASMphWc8cWYCOkVEYM8eSX4fCmAAPhSklAQR42YYXclSMa8A==",
+      "path": "tizen.net.sdk/1.0.1",
+      "hashPath": "tizen.net.sdk.1.0.1.nupkg.sha512"
+    },
+    "Xamarin.Forms/3.1.0.637273": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iYIMlhf5BFutJiVYYfawEtMzq4vo9m5qdT7R/IeDD40ENsqxqMBmvwp1/VzfD0las3ptkE0vgUG57O7QcUJlow==",
+      "path": "xamarin.forms/3.1.0.637273",
+      "hashPath": "xamarin.forms.3.1.0.637273.nupkg.sha512"
+    },
+    "Minesweeper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

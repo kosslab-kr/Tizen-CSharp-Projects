@@ -1,0 +1,11 @@
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Core.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Platform.Tizen.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Platform.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Xaml.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Minesweeper.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Minesweeper.pdb
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Minesweeper.Tizen.Mobile.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\tpkroot\bin\Minesweeper.Tizen.Mobile.pdb
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\tpkroot\shared\res\Minesweeper.Tizen.Mobile.png
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\tpkroot\tizen-manifest.xml
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\org.tizen.example.Minesweeper.Tizen.Mobile-1.0.0.tpk

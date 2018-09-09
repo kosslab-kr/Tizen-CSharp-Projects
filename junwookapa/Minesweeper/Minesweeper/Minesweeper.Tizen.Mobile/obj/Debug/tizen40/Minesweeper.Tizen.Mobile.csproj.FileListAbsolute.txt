@@ -1,0 +1,12 @@
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\Minesweeper.Tizen.Mobile.deps.json
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\Minesweeper.Tizen.Mobile.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\Minesweeper.Tizen.Mobile.pdb
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\Minesweeper.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\bin\Debug\tizen40\Minesweeper.pdb
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\obj\Debug\tizen40\Minesweeper.Tizen.Mobile.csprojAssemblyReference.cache
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\obj\Debug\tizen40\Minesweeper.Tizen.Mobile.csproj.CoreCompileInputs.cache
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\obj\Debug\tizen40\Minesweeper.Tizen.Mobile.AssemblyInfoInputs.cache
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\obj\Debug\tizen40\Minesweeper.Tizen.Mobile.AssemblyInfo.cs
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\obj\Debug\tizen40\Minesweeper.Tizen.Mobile.csproj.CopyComplete
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\obj\Debug\tizen40\Minesweeper.Tizen.Mobile.dll
+C:\Users\jun\source\repos\Minesweeper\Minesweeper\Minesweeper.Tizen.Mobile\obj\Debug\tizen40\Minesweeper.Tizen.Mobile.pdb
