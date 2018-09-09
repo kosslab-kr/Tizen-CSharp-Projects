@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baseball_with_AI", "Baseball_with_AI\Baseball_with_AI\Baseball_with_AI.csproj", "{9310FE5D-CCAF-48CC-A9A9-3B4AD5868C38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baseball_with_AI.Tizen.Mobile", "Baseball_with_AI\Baseball_with_AI.Tizen.Mobile\Baseball_with_AI.Tizen.Mobile.csproj", "{2697CAA2-58A0-47E2-A724-BD8E6863566A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9310FE5D-CCAF-48CC-A9A9-3B4AD5868C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9310FE5D-CCAF-48CC-A9A9-3B4AD5868C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9310FE5D-CCAF-48CC-A9A9-3B4AD5868C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9310FE5D-CCAF-48CC-A9A9-3B4AD5868C38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2697CAA2-58A0-47E2-A724-BD8E6863566A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2697CAA2-58A0-47E2-A724-BD8E6863566A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2697CAA2-58A0-47E2-A724-BD8E6863566A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2697CAA2-58A0-47E2-A724-BD8E6863566A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B88EBAC-A6E9-461C-B129-422B2CB88544}
+	EndGlobalSection
+EndGlobal
