@@ -32,6 +32,6 @@ Tizen-C# App for Mobile, Wearable, and TV profiles.
 - 9월 15일(토) : 팀원 1차 미팅 (장소/시간 : 미정) -> 프로젝트 주제 선정 및 역할 협의
 - 10월 31일(수) 까지 : 프로젝트 개발
 
-## Mentor's email
+## Mentor
 
 손기성 : eson@samsung.com
