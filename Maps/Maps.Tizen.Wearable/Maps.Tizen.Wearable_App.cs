@@ -23,6 +23,44 @@ using ElmSharp.Wearable;
 using Tizen.Maps;
 using Tizen;
 
+
+// 호출 함수 정리
+// 1. Main(string[] args) : 앱 진입점
+// 2. OnCreate() : 객체 생성 callback
+// 2.1. public void CloseApp() 애플리케이션 종료시 호출하는 사용자 함수 
+
+// 3. RequestUserConsent() : 사용자 권한 요청
+// 4. Initialize() : 각종 앱 객체 초기화
+// 5. CreateMap() : 맵 객체 생성, 지도 생성 지도 화면 리사이즈, 맵 중앙지점 이동등 각종 지도 뷰어 옵션 지정
+
+// 6. 이벤트 처리 함수들
+// 6.1. ViewOptionSelected(object sender, MoreOptionItemEventArgs oe) : 각종 뷰 선택에 관한 이벤트 처리
+// 6.1. MapViewLongPressed(object sender, MapGestureEventArgs e) 맵 뷰어를 길게 눌럿을 때 이벤트
+
+// 7. 지리 정보 요청 함수들
+// 7.1. 좌표로 주소 정보를 요청하는 함수
+public async void RequestAddress(double latitude, double longitude)
+// 7.2. 지리 정보로 경토탐색 정보를 요청하는 함수
+public async void RequestRoute(Geocoordinates from, Geocoordinates to)
+// 7.3. 좌표 정보로 POI 정보를 요청하는 함수
+// ※ POI(Point of interest )는 관심지역으로, 내비게이션 등의 전자지도 위에 표시된 건물과 상점 등을 말한다. 
+// 출처: http://kimseunghyun76.tistory.com/314
+public async void RequestPOI(Geocoordinates coordinate, string Category)
+
+// 8. 지도 데이터 처리 관련 함수들
+// 8.1. 현재 선택된 마커 표시
+// ※※ 꼭 for문을 다돌아야 하는가, 더 효율적인 알고리즘 있다면 사용 가능하지 않을까?
+public void SetCurrentMarker(Marker marker)
+// 8.2. 팝업 객체 생성 및 표출.
+private void CreatePopup(string text)
+// 8.3. 띄워진 팝업을 dismiss 한다. 
+// ※※ dissmiss 시에 GC가 되지 않으면 GC시킬 필요도 있을 것 같다 확인후 수정이 가능 할까?
+private void PopupDismiss(object sender, EventArgs e)
+
+// 8.4. 각종 맵유어관련 데이터 삭제
+public void ClearData()
+
+
 namespace Maps.Tizen.Wearable
 {
 	/// <summary>
@@ -119,9 +157,7 @@ namespace Maps.Tizen.Wearable
 		/// </summary>
 		public Geocoordinates toPosition = null;
 
-		/// <summary>
-		/// Handle when your app creates.
-		/// </summary>
+		// 2. 객체 생성시 불러지는 Callback 객체
 		protected override void OnCreate()
         {
             base.OnCreate();
@@ -129,9 +165,7 @@ namespace Maps.Tizen.Wearable
 			RequestUserConsent();
         }
 
-		/// <summary>
-		/// Request the user consent.
-		/// </summary>
+		// 3. 사용자 동의 요청
 		public async void RequestUserConsent()
 		{
 			// Create the MapService for the HERE provider
@@ -139,9 +173,11 @@ namespace Maps.Tizen.Wearable
 
 			// Request the user consent
 			// The user consent popup will be displayed if the value is false
+			// 3.1. 사용자가 Interaction이 있을때까지 기다림
 			await s_maps.RequestUserConsent();
 
 			// Check the user's choice in the user consent popup
+			// 3.2. false일시 앱 종료
 			if (s_maps.UserConsented != true)
 			{
 				// Dispose the s_maps
@@ -151,9 +187,10 @@ namespace Maps.Tizen.Wearable
 				// Close this app
 				Exit();
 			}
-			else
+			else // 3.3. true일 시 앱 초기화 진행
 			{
 				// Create a base UI
+				
 				Initialize();
 			}
 		}
@@ -161,6 +198,7 @@ namespace Maps.Tizen.Wearable
 		/// <summary>
 		/// Create a base UI.
 		/// </summary>
+		//4.1. 앱 객체 초기화
 		void Initialize()
         {
 			// Create a Window
@@ -192,6 +230,8 @@ namespace Maps.Tizen.Wearable
 		/// <summary>
 		/// Create a MapView object.
 		/// </summary>
+		// 
+		// 5. 맵 생성
 		public void CreateMap()
 		{
 			// Create the MapView
@@ -204,7 +244,8 @@ namespace Maps.Tizen.Wearable
 			// Show the MapView
 			s_mapview.Show();
 			// Set the latitude and longitude for the center position of the MapView
-			//s_mapview.Center = new Geocoordinates(SEOUL_LAT, SEOUL_LON);
+			
+			//s_mapview.Center = new Geocoordinates(SEOUL_LAT, SEOUL_LON);     // 이 값을 지정 할 시 맵 중앙이 서울로 위치함
 			s_mapview.Center = new Geocoordinates(DEFAULT_LAT, DEFAULT_LON);
 			// Set the zoom level
 			s_mapview.ZoomLevel = 9;
@@ -227,9 +268,9 @@ namespace Maps.Tizen.Wearable
 			viewOption.Clicked += ViewOptionSelected;
 
 			// Create and add items of the MoreOption
-			viewOption.Items.Add(new MoreOptionItem() { MainText = "Map" });
-			viewOption.Items.Add(new MoreOptionItem() { MainText = "POI" });
-			viewOption.Items.Add(new MoreOptionItem() { MainText = "Route" });
+			viewOption.Items.Add(new MoreOptionItem() { MainText = "Map" }); // 지도 추가
+			viewOption.Items.Add(new MoreOptionItem() { MainText = "POI" }); // POI, 각 Point의 정보 
+			viewOption.Items.Add(new MoreOptionItem() { MainText = "Route" }); // 경로 초기화
 
 			RotaryEventManager.Rotated += (e) =>
 			{
@@ -255,6 +296,7 @@ namespace Maps.Tizen.Wearable
 		/// </summary>
 		/// <param name="sender">Specifies the sender object</param>
 		/// <param name="oe">Specifies the occured event</param>
+		// 6. 아이템 선택에 따른 이벤트 처리
 		private void ViewOptionSelected(object sender, MoreOptionItemEventArgs oe)
 		{
 			// Remove the used data
@@ -307,6 +349,7 @@ namespace Maps.Tizen.Wearable
 		/// </summary>
 		/// <param name="sender">Specifies the sender object</param>
 		/// <param name="e">Specifies the occured event</param>
+		//6.2. 맵 뷰어를 길게 눌럿을 때 이벤트
 		private void MapViewLongPressed(object sender, MapGestureEventArgs e)
 		{
 			// Set the zoom level
@@ -363,6 +406,7 @@ namespace Maps.Tizen.Wearable
 		/// </summary>
 		/// <param name="latitude">Specifies the latitude for getting the address</param>
 		/// <param name="longitude">Specifies the longitude for getting the address</param>
+		// 7.1. 좌표로 주소 정보를 요청하는 함수
 		public async void RequestAddress(double latitude, double longitude)
 		{
 			try
@@ -389,6 +433,8 @@ namespace Maps.Tizen.Wearable
 		/// </summary>
 		/// <param name="from">Specifies the starting position</param>
 		/// <param name="to">Specifies the end position</param>
+		
+		// 7.2. 지리 정보로 경토탐색 정보를 요청하는 함수
 		public async void RequestRoute(Geocoordinates from, Geocoordinates to)
 		{
 			try
@@ -435,6 +481,8 @@ namespace Maps.Tizen.Wearable
 		/// </summary>
 		/// <param name="coordinate">Specifies the starting position</param>
 		/// <param name="Category">Specifies the end position</param>
+		
+		// 7.3. 좌표 정보로 POI 정보를 요청하는 함수
 		public async void RequestPOI(Geocoordinates coordinate, string Category)
 		{
 			try
@@ -485,6 +533,9 @@ namespace Maps.Tizen.Wearable
 		/// Display the current marker.
 		/// </summary>
 		/// <param name="marker">Specifies the current marker</param>
+		
+		// 8.1. 현재 선택된 마커 표시
+		// ※ 꼭 for문을 다돌아야 하는가, 더 효율적인 알고리즘 있다면 사용 가능하지 않을까?
 		public void SetCurrentMarker(Marker marker)
 		{
 			int currentIndex = 0;
@@ -516,6 +567,8 @@ namespace Maps.Tizen.Wearable
 		/// Create the toast popup
 		/// </summary>
 		/// <param name="text">Specifies the text</param>
+		
+		// 8.2. 팝업 객체 생성 및 표출.
 		private void CreatePopup(string text)
 		{
 			// Create a popup
@@ -538,6 +591,9 @@ namespace Maps.Tizen.Wearable
 		/// </summary>
 		/// <param name="sender">Specifies the object</param>
 		/// <param name="e">Specifies the EventArgs</param>
+		
+		// 8.3. 띄워진 팝업을 dismiss 한다. 
+		// ※ dissmiss 시에 GC가 되지 않으면 GC시킬 필요도 있을 것 같다 확인 필요
 		private void PopupDismiss(object sender, EventArgs e)
 		{
 			((Popup)sender).Dismiss();
@@ -546,6 +602,8 @@ namespace Maps.Tizen.Wearable
 		/// <summary>
 		/// Remove the used resource.
 		/// </summary>
+
+		// 8.4. 각종 맵유어관련 데이터 삭제
 		public void ClearData()
 		{
 			// Clear the marker list
@@ -572,6 +630,7 @@ namespace Maps.Tizen.Wearable
 		/// <summary>
 		/// Remove the used resource and terminate this application.
 		/// </summary>
+		// 2.1. 애플리케이션 종료시 호출하는 
 		public void CloseApp()
 		{
 			// Remove the used data
@@ -596,10 +655,7 @@ namespace Maps.Tizen.Wearable
 			Exit();
 		}
 
-		/// <summary>
-		/// The entry point for the application.
-		/// </summary>
-		/// <param name="args"> A list of command line arguments.</param>
+		// 1. 앱 진입점
 		static void Main(string[] args)
         {
             Elementary.Initialize();
