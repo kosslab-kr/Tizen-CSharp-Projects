@@ -27,11 +27,13 @@ namespace Maps.Tizen.Wearable
 {
 	/// <summary>
 	/// Maps application main class.
+	/// Maps 어플리케이션의 메인 클래스입니다.
 	/// </summary>
 	class App : CoreUIApplication
     {
 		/// <summary>
 		/// The enum type for view page.
+		/// View page 의 열거형입니다.
 		/// </summary>
 		public enum ViewPage
 		{
@@ -45,37 +47,47 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// The MapService object.
+		/// MapService 객체를 변수명 s_maps로 선언합니다.
 		/// </summary>
 		public MapService s_maps = null;
 
 		/// <summary>
 		/// The MapView object.
+		/// MapView 객체를 변수명 s_mapview로 선언합니다.
 		/// </summary>
 		public MapView s_mapview = null;
 
 		/// <summary>
+		/// Maps를 사용하려면 키가 필요합니다.
 		/// The key of HERE provider. Please get the key from https://developer.here.com/.
+		/// 키는 https://developer.here.com/ 여기서 받으세요.
 		/// You can see the guide about getting the key in https://developer.tizen.org/development/guides/native-application/location-and-sensors/maps-and-maps-service/getting-here-maps-credentials.
+		/// 키를 얻는 방법에 대한 가이드는 https://developer.tizen.org/development/guides/native-application/location- 에서 볼 수 있습니다.
+		/// 샘플 키입니다.
 		/// </summary>
 		public string HERE_KEY = "57l3m35FktUN4sBpDTcJ/ckFerp2t5bCVjouh9v2HCw";
 
 		/// <summary>
 		/// The list for the place.
+		/// 장소 리스트 PlaceList를 선언합니다.
 		/// </summary>
 		public List<Place> PlaceList = null;
 
 		/// <summary>
 		/// The list for the marker.
+		/// 표시 리스트 MarkerList를 선언합니다.
 		/// </summary>
 		public List<Pin> MarkerList = new List<Pin>();
 
 		/// <summary>
 		/// The categories for the HERE provider.
+		/// HERE 프로바이더의 카테고리, HereCategory를 선언하고, 초기화합니다.
 		/// </summary>
 		public string[] HereCategory = { "eat-drink", "transport", "accommodation", "shopping", "leisure-outdoor" };
 
 		/// <summary>
 		/// The current view.
+		/// 현재 뷰 view를 선언하고 ViewPage의 MAP으로 초기화합니다.
 		/// </summary>
 		public ViewPage view = ViewPage.MAP;
 
@@ -86,62 +98,76 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// The longitude value for the seoul.
+		/// 서울의 위도 값입니다.
 		/// </summary>
 		public double SEOUL_LON = 127.022782;
 
 		/// <summary>
 		/// The default latitude value.
+		/// 기본 위도 값입니다.
 		/// </summary>
 		public double DEFAULT_LAT = 28.64362;
 
 		/// <summary>
 		/// The default longitude value.
+		/// 기본 경도 값입니다.
 		/// </summary>
 		public double DEFAULT_LON = 77.19865;
 
 		/// <summary>
 		/// The Window object.
+		/// 창 오브젝트를 선언합니다.
 		/// </summary>
 		public Window window = null;
 
 		/// <summary>
 		/// The Naviframe object.
+		/// Naviframe 객체를 선언합니다.
 		/// </summary>
 		public Naviframe navi = null;
 
 		/// <summary>
 		/// The coordinate for the starting position.
+		/// 출발 위치의 좌표 객체를 선언합니다.
 		/// </summary>
 		public Geocoordinates fromPosition = null;
 
 		/// <summary>
 		/// The coordinate for the end position.
+		/// 도착 위치의 좌표 객체를 선언합니다.
 		/// </summary>
 		public Geocoordinates toPosition = null;
 
 		/// <summary>
 		/// Handle when your app creates.
+		/// 앱이 생성될 때
 		/// </summary>
 		protected override void OnCreate()
         {
             base.OnCreate();
 			//Request the user consent
+			//사용자 동의 메소드 호출
 			RequestUserConsent();
         }
 
 		/// <summary>
 		/// Request the user consent.
+		/// 사용자 동의 메소드
 		/// </summary>
 		public async void RequestUserConsent()
 		{
 			// Create the MapService for the HERE provider
+			// s_maps 초기화
 			s_maps = new MapService("HERE", HERE_KEY);
 
 			// Request the user consent
 			// The user consent popup will be displayed if the value is false
+			// 값이 false일 경우 사용자 동의 팝업이 표시됩니다.
 			await s_maps.RequestUserConsent();
 
 			// Check the user's choice in the user consent popup
+			// 사용자 동의 팝업에서 사용자의 선택을 체크합니다.
+			// 사용자가 동의 하지 않으면 s_maps를 Dispose하고 앱 종료.
 			if (s_maps.UserConsented != true)
 			{
 				// Dispose the s_maps
@@ -150,20 +176,23 @@ namespace Maps.Tizen.Wearable
 
 				// Close this app
 				Exit();
-			}
-			else
-			{
+			} 
+			else // 사용자가 동의하면
+			{			
 				// Create a base UI
+				// 기본 UI 나오게
 				Initialize();
 			}
 		}
 
 		/// <summary>
 		/// Create a base UI.
+		/// 기본 UI
 		/// </summary>
 		void Initialize()
         {
 			// Create a Window
+			// 창 생성
 			window = new Window("ElmSharpApp")
 			{
 				AvailableRotations = DisplayRotation.Degree_0 | DisplayRotation.Degree_180 | DisplayRotation.Degree_270 | DisplayRotation.Degree_90,
@@ -173,6 +202,7 @@ namespace Maps.Tizen.Wearable
             window.Show();
 
 			// Create a Conformant
+			// Conformant 생성
 			var conf = new Conformant(window)
 			{
 				WeightX = 1.0,
@@ -191,6 +221,7 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// Create a MapView object.
+		/// MapView 객체 생성
 		/// </summary>
 		public void CreateMap()
 		{
@@ -204,14 +235,17 @@ namespace Maps.Tizen.Wearable
 			// Show the MapView
 			s_mapview.Show();
 			// Set the latitude and longitude for the center position of the MapView
-			//s_mapview.Center = new Geocoordinates(SEOUL_LAT, SEOUL_LON);
+			// MapView의 중심 위치에 대한 위도와 경도를 설정합니다.
+			//  설정 방법 예) s_mapview.Center = new Geocoordinates(SEOUL_LAT, SEOUL_LON);
 			s_mapview.Center = new Geocoordinates(DEFAULT_LAT, DEFAULT_LON);
 			// Set the zoom level
 			s_mapview.ZoomLevel = 9;
 			// Add the handler for the longpress event on MapView
+			// MapView에 LongPressed 이벤트핸들러를 추가합니다.
 			s_mapview.LongPressed += MapViewLongPressed;
 
 			// Create the MoreOption
+			// MoreOption 만들기
 			var viewOption = new MoreOption(window)
 			{
 				AlignmentX = -1,
@@ -221,12 +255,14 @@ namespace Maps.Tizen.Wearable
 				Direction = MoreOptionDirection.Right
 			};
 			// Move the viewOption
+			// viewOpeion 위치 이동
 			viewOption.Move(180, 180);
 			// Show the viewOption
 			viewOption.Show();
 			viewOption.Clicked += ViewOptionSelected;
 
 			// Create and add items of the MoreOption
+			// MoreOption에 아이템을 추가합니다.
 			viewOption.Items.Add(new MoreOptionItem() { MainText = "Map" });
 			viewOption.Items.Add(new MoreOptionItem() { MainText = "POI" });
 			viewOption.Items.Add(new MoreOptionItem() { MainText = "Route" });
@@ -251,25 +287,34 @@ namespace Maps.Tizen.Wearable
 		}
 
 		/// <summary>
-		/// Handle the event of the longpress on the MapView.
+		/// Handle the event of the select on the ViewOption.
+		/// ViewOption에서 selected 이벤트를 처리합니다.
 		/// </summary>
 		/// <param name="sender">Specifies the sender object</param>
 		/// <param name="oe">Specifies the occured event</param>
 		private void ViewOptionSelected(object sender, MoreOptionItemEventArgs oe)
 		{
 			// Remove the used data
+			// 사용된 데이터를 제거합니다.
 			ClearData();
-
+			
+			// MoreOption의 아이템 중에 MainText가 
+			// Map이면
 			if (oe.Item.MainText == "Map")
 			{
+				// view를 MAP으로 초기화
 				view = ViewPage.MAP;
+				// IsOpend false로 설정
 				((MoreOption)sender).IsOpened = false;
-			}
+			}			
+			// POI이면
 			else if (oe.Item.MainText == "POI")
-			{
+			{ 
+				// view를 POI로 초기화
 				view = ViewPage.POI;
 
 				// Create the RotarySelector for the category
+				// 카테고리에 대한 RotarySelector 만들기
 				var poiSelector = new RotarySelector(window)
 				{
 					AlignmentX = -1,
@@ -279,24 +324,30 @@ namespace Maps.Tizen.Wearable
 				};
 				foreach (string category in HereCategory)
 				{
+					// poiSelector에 HerCategory의 category만큼 아이템 추가
 					poiSelector.Items.Add(new RotarySelectorItem() { MainText = category });
 				}
 
 				poiSelector.Show();
-
+				
+				// poiSelector를 클릭했을 때
 				poiSelector.Clicked += (s, e) => 
 				{
 					// Request the pois with the center position
+					// 중앙위치로 POI 리퀘스트
 					RequestPOI(new Geocoordinates(s_mapview.Center.Latitude, s_mapview.Center.Longitude), e.Item.MainText);
 
 					poiSelector.Unrealize();
 
 					((MoreOption)sender).IsOpened = false;
 				};
+				// 뒤로가기 버튼을 눌렀을 때 poiSelector 해제
 				poiSelector.BackButtonPressed += (s, e) => { poiSelector.Unrealize(); };
 			}
+			// Route이면
 			else if (oe.Item.MainText == "Route")
 			{
+				// view를 ROUTE로 초기화
 				view = ViewPage.ROUTE;
 				((MoreOption)sender).IsOpened = false;
 			}
@@ -304,6 +355,7 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// Handle the event of the longpress on the MapView.
+		/// MapView에서 longpress의 이벤트를 처리합니다.
 		/// </summary>
 		/// <param name="sender">Specifies the sender object</param>
 		/// <param name="e">Specifies the occured event</param>
@@ -321,10 +373,13 @@ namespace Maps.Tizen.Wearable
 				// Remove the used data
 				ClearData();
 				// Move to the longpressed position
+				// longpressed 지점을 이동합니다.
 				s_mapview.Center = e.Geocoordinates;
 				// Add the pin to the center positon of the map view
+				// map view 중앙 지점에 핀을 추가합니다.
 				s_mapview.Add(new Pin(s_mapview.Center));
 				// Request the address by the center position of the map view and display the address to the label of the starting position
+				// map view의 중앙의 주소를 요청하고 시작 위치의 label에 주소를 표시합니다.
 				RequestAddress(s_mapview.Center.Latitude, s_mapview.Center.Longitude);
 			}
 			else if (view == ViewPage.ROUTE)
@@ -339,13 +394,18 @@ namespace Maps.Tizen.Wearable
 				s_mapview.Center = e.Geocoordinates;
 
 				// Check the text of the from the label
+				// label의 텍스트를 확인합니다.
+				// null이면
 				if (fromPosition == null)
 				{
 					// Add a marker to the center position
+					// 중앙에 마커를 추가합니다.
 					s_mapview.Add(new Pin(s_mapview.Center));
 					// Create the Geocoordinates from the center position
+					// 중앙에서 Geocoordinates를 생성합니다.
 					fromPosition = new Geocoordinates(s_mapview.Center.Latitude, s_mapview.Center.Longitude);
 				}
+				// null이 아니면
 				else
 				{
 					// Add a marker to the center position
@@ -353,6 +413,7 @@ namespace Maps.Tizen.Wearable
 					// Create the Geocoordinates from the center position
 					toPosition = new Geocoordinates(s_mapview.Center.Latitude, s_mapview.Center.Longitude);
 					// Request a route with the fromPosition and the toPosition
+					// 출발지점과 도착지점의 route를 요청합니다.
 					RequestRoute(fromPosition, toPosition);
 				}
 			}
@@ -360,6 +421,7 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// Request an address with the latitude and longitude.
+		/// 위도와 경도를 요청합니다.
 		/// </summary>
 		/// <param name="latitude">Specifies the latitude for getting the address</param>
 		/// <param name="longitude">Specifies the longitude for getting the address</param>
@@ -369,8 +431,10 @@ namespace Maps.Tizen.Wearable
 			{
 				view = ViewPage.MAP_IN_PROGRESS;
 				// Request an address with the latitude and longitude
+				// 위도와 경도 요청
 				var response = await s_maps.CreateReverseGeocodeRequest(latitude, longitude).GetResponseAsync();
 				// Set the address to the popup
+				// 주소를 팝업
 				if (view == ViewPage.MAP_IN_PROGRESS)
 				{
 					CreatePopup(response.First().Building.ToString() + " " + response.First().Street + " " + response.First().City + " " + response.First().State + " " + response.First().Country);
@@ -380,12 +444,14 @@ namespace Maps.Tizen.Wearable
 			catch (Exception e)
 			{
 				// Display logs with the error message
+				// 에러 메시지 로그를 표시합니다.
 				Log.Debug("Map", e.Message.ToString());
 			}
 		}
 
 		/// <summary>
 		/// Request a route between two positions.
+		/// 두 지점 사이의 route 요청
 		/// </summary>
 		/// <param name="from">Specifies the starting position</param>
 		/// <param name="to">Specifies the end position</param>
@@ -395,8 +461,10 @@ namespace Maps.Tizen.Wearable
 			{
 				view = ViewPage.ROUTE_IN_PROGRESS;
 				// Request a route with between two positions
+				// 두 지점 사이의 route를 요청합니다.
 				var response = await s_maps.CreateRouteSearchRequest(from, to).GetResponseAsync();
 				// Get the route
+				// route 가져오기
 				IEnumerator<Route> route = response.GetEnumerator();
 
 				route.MoveNext();
@@ -404,6 +472,7 @@ namespace Maps.Tizen.Wearable
 				if (view == ViewPage.ROUTE_IN_PROGRESS)
 				{
 					// Display the polylines after making it from the path of the route
+					// route의 경로에서 polylines를 만든 후 표시합니다.
 					s_mapview.Add(new Polyline((List<Geocoordinates>)route.Current.Path, ElmSharp.Color.Red, 5));
 
 					string distance;
@@ -432,6 +501,7 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// Request pois with the position and the category.
+		/// 위치와 카테고리로 pois를 요청.
 		/// </summary>
 		/// <param name="coordinate">Specifies the starting position</param>
 		/// <param name="Category">Specifies the end position</param>
@@ -483,6 +553,7 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// Display the current marker.
+		/// 현재 마커를 표시
 		/// </summary>
 		/// <param name="marker">Specifies the current marker</param>
 		public void SetCurrentMarker(Marker marker)
@@ -514,6 +585,7 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// Create the toast popup
+		/// 팝업 생성
 		/// </summary>
 		/// <param name="text">Specifies the text</param>
 		private void CreatePopup(string text)
@@ -535,6 +607,7 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// Dismiss the toast popup
+		/// 팝업닫기
 		/// </summary>
 		/// <param name="sender">Specifies the object</param>
 		/// <param name="e">Specifies the EventArgs</param>
@@ -545,6 +618,7 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// Remove the used resource.
+		/// 사용된 리소스를 제거합니다.
 		/// </summary>
 		public void ClearData()
 		{
@@ -571,6 +645,7 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// Remove the used resource and terminate this application.
+		/// 사용된 리소스를 제거하고 이 응용 프로그램을 종료합니다.
 		/// </summary>
 		public void CloseApp()
 		{
@@ -598,6 +673,7 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// The entry point for the application.
+		/// 응용 프로그램의 진입점입니다.
 		/// </summary>
 		/// <param name="args"> A list of command line arguments.</param>
 		static void Main(string[] args)
