@@ -27,7 +27,7 @@ namespace Maps.Tizen.Wearable
 {
 	/// <summary>
 	/// Maps application main class.
-	/// Maps 어플리케이션의 메인 클래스입니다.
+	/// Maps 응용 프로그램의 메인 클래스입니다.
 	/// </summary>
 	class App : CoreUIApplication
     {
@@ -93,24 +93,25 @@ namespace Maps.Tizen.Wearable
 
 		/// <summary>
 		/// The latitude value for the seoul.
+		/// 서울의 위도 값입니다.
 		/// </summary>
 		public double SEOUL_LAT = 37.466548;
 
 		/// <summary>
 		/// The longitude value for the seoul.
-		/// 서울의 위도 값입니다.
+		/// 서울의 경도 값입니다.
 		/// </summary>
 		public double SEOUL_LON = 127.022782;
 
 		/// <summary>
 		/// The default latitude value.
-		/// 기본 위도 값입니다.
+		/// 이 샘플앱에서 사용하는 기본 위도 값입니다.
 		/// </summary>
 		public double DEFAULT_LAT = 28.64362;
 
 		/// <summary>
 		/// The default longitude value.
-		/// 기본 경도 값입니다.
+		/// 이 샘플앱에서 사용하는 기본 경도 값입니다.
 		/// </summary>
 		public double DEFAULT_LON = 77.19865;
 
