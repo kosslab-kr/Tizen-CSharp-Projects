@@ -1,0 +1,81 @@
+{
+  "runtimeTarget": {
+    "name": "Tizen,Version=v4.0/",
+    "signature": "90038655eb3d523ac5c3470f26cdf3f5f4111325"
+  },
+  "compilationOptions": {},
+  "targets": {
+    "Tizen,Version=v4.0": {},
+    "Tizen,Version=v4.0/": {
+      "Find_maze/1.0.0": {
+        "dependencies": {
+          "Tizen.NET": "4.0.0",
+          "Tizen.NET.Sdk": "1.0.1",
+          "Tizen.Wearable.CircularUI": "1.0.0-pre2-00065",
+          "Xamarin.Forms": "3.1.0.637273"
+        },
+        "runtime": {
+          "Find_maze.dll": {}
+        }
+      },
+      "Tizen.NET/4.0.0": {},
+      "Tizen.NET.Sdk/1.0.1": {},
+      "Tizen.Wearable.CircularUI/1.0.0-pre2-00065": {
+        "dependencies": {
+          "Tizen.NET": "4.0.0",
+          "Xamarin.Forms": "3.1.0.637273"
+        },
+        "runtime": {
+          "lib/tizen40/Tizen.Wearable.CircularUI.Forms.Renderer.dll": {},
+          "lib/tizen40/Tizen.Wearable.CircularUI.Forms.dll": {}
+        }
+      },
+      "Xamarin.Forms/3.1.0.637273": {
+        "dependencies": {
+          "Tizen.NET": "4.0.0"
+        },
+        "runtime": {
+          "lib/tizen40/Xamarin.Forms.Core.dll": {},
+          "lib/tizen40/Xamarin.Forms.Platform.Tizen.dll": {},
+          "lib/tizen40/Xamarin.Forms.Platform.dll": {},
+          "lib/tizen40/Xamarin.Forms.Xaml.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Find_maze/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tizen.NET/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e/q/gwwzrcR6LRsQiZbpKYN+GJsiA7/lh6p8ztANDoJLnIlKPmiNsBXxm6Tt8yHzwMywmAXBwyp4mpLCRG0J+A==",
+      "path": "tizen.net/4.0.0",
+      "hashPath": "tizen.net.4.0.0.nupkg.sha512"
+    },
+    "Tizen.NET.Sdk/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g3LzVzxalGn3F1H9yf2lXFT4CHlRlrzqEU8MmSASMphWc8cWYCOkVEYM8eSX4fCmAAPhSklAQR42YYXclSMa8A==",
+      "path": "tizen.net.sdk/1.0.1",
+      "hashPath": "tizen.net.sdk.1.0.1.nupkg.sha512"
+    },
+    "Tizen.Wearable.CircularUI/1.0.0-pre2-00065": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mAmvSKW1Y+2fiHmwNR8RKTRss2pn0IKkrSYShQTDb6SXyvT2E7TQom9wvO9WcrXTEXsOjFMKL1CHaxXzHY4EMg==",
+      "path": "tizen.wearable.circularui/1.0.0-pre2-00065",
+      "hashPath": "tizen.wearable.circularui.1.0.0-pre2-00065.nupkg.sha512"
+    },
+    "Xamarin.Forms/3.1.0.637273": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iYIMlhf5BFutJiVYYfawEtMzq4vo9m5qdT7R/IeDD40ENsqxqMBmvwp1/VzfD0las3ptkE0vgUG57O7QcUJlow==",
+      "path": "xamarin.forms/3.1.0.637273",
+      "hashPath": "xamarin.forms.3.1.0.637273.nupkg.sha512"
+    }
+  }
+}
