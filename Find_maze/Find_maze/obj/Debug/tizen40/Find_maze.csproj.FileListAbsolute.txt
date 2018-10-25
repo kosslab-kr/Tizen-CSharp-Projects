@@ -1,0 +1,10 @@
+C:\Users\ahddl\source\repos\Find_maze\Find_maze\bin\Debug\tizen40\Find_maze.deps.json
+C:\Users\ahddl\source\repos\Find_maze\Find_maze\bin\Debug\tizen40\Find_maze.dll
+C:\Users\ahddl\source\repos\Find_maze\Find_maze\bin\Debug\tizen40\Find_maze.pdb
+C:\Users\ahddl\source\repos\Find_maze\Find_maze\obj\Debug\tizen40\Find_maze.csprojAssemblyReference.cache
+C:\Users\ahddl\source\repos\Find_maze\Find_maze\obj\Debug\tizen40\Find_maze.csproj.CoreCompileInputs.cache
+C:\Users\ahddl\source\repos\Find_maze\Find_maze\obj\Debug\tizen40\Find_maze.AssemblyInfoInputs.cache
+C:\Users\ahddl\source\repos\Find_maze\Find_maze\obj\Debug\tizen40\Find_maze.AssemblyInfo.cs
+C:\Users\ahddl\source\repos\Find_maze\Find_maze\obj\Debug\tizen40\XamlC.stamp
+C:\Users\ahddl\source\repos\Find_maze\Find_maze\obj\Debug\tizen40\Find_maze.dll
+C:\Users\ahddl\source\repos\Find_maze\Find_maze\obj\Debug\tizen40\Find_maze.pdb
