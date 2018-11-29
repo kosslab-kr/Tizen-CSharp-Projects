@@ -1,0 +1,11 @@
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\tpkroot\bin\Tizen.Wearable.CircularUI.Forms.Renderer.dll
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\tpkroot\bin\Tizen.Wearable.CircularUI.Forms.dll
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Core.dll
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Platform.Tizen.dll
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Platform.dll
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\tpkroot\bin\Xamarin.Forms.Xaml.dll
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\tpkroot\bin\Find_maze.dll
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\tpkroot\bin\Find_maze.pdb
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\tpkroot\shared\res\Find_maze.png
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\tpkroot\tizen-manifest.xml
+C:\Users\ahddl\source\repos\YOUJIHYE\Find_maze\Find_maze\bin\Debug\tizen40\org.tizen.example.Find_maze-1.0.0.tpk
